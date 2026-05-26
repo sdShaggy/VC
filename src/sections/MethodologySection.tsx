@@ -10,7 +10,7 @@ const steps = [
     description: 'Rainwater absorbs atmospheric CO₂, forming carbonic acid — nature\'s primary weathering agent. This is the starting point of the 5,000-year permanence chain.',
     color: '#4A8C3F',
     bgColor: '#E8F2E5',
-    image: 'public//atmco2.jpg?w=600&q=80&fit=crop',
+    image: '/atmco2.jpg?w=600&q=80&fit=crop',
   },
   {
     number: '02',

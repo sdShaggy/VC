@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { MapPin, TrendingUp, Users, Sprout } from 'lucide-react';
 
-const MP_IMAGE = 'public//sagar.avif' ;
+const MP_IMAGE = '/sagar.avif' ;
 
 function AnimatedCounter({ end, suffix = '', prefix = '', duration = 2200 }: { end: number; suffix?: string; prefix?: string; duration?: number }) {
   const [count, setCount] = useState(0);

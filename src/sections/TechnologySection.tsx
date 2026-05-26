@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import { Zap, Layers, FlaskConical, Leaf } from 'lucide-react';
 
-const BASALT_IMAGE = 'public/erw_1.png?w=900&q=80&fit=crop';
+const BASALT_IMAGE = '/erw_1.png?w=900&q=80&fit=crop';
 const SOIL_IMAGE = 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900&q=80&fit=crop';
 
 export const TechnologySection: React.FC = () => {
