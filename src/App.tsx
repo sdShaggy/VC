@@ -10,7 +10,6 @@ import { MRVSection } from './sections/MRVSection';
 import { ImpactSection } from './sections/ImpactSection';
 import { TeamSection } from './sections/TeamSection';
 import { OfftakeSection } from './sections/OfftakeSection';
-import { CarbonPathwaySection } from './sections/CarbonPathwaySection';
 import { LinkedInFeedSection } from './sections/LinkedInFeedSection';
 
 function App() {
@@ -42,7 +41,6 @@ function App() {
         <StorytellingSection />
         <TechnologySection />
         <MethodologySection />
-        <CarbonPathwaySection /> 
         <MRVSection />
         <ImpactSection />
         <TeamSection />

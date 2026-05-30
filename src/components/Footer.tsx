@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-sans font-semibold text-sm text-vc-offwhite mb-5 tracking-wide">Protocol</h4>
             <ul className="flex flex-col gap-3">
-              {['Technology', 'Methodology', 'Carbon Pathway', 'Operational Scale', 'dMRV System'].map(item => (
+              {['Technology', 'Methodology', 'Operational Scale', 'dMRV System'].map(item => (
                 <li key={item}>
                   <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors animated-underline">
                     {item}

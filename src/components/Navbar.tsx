@@ -5,7 +5,7 @@ const navLinks = [
   { label: 'Technology', href: '#technology' },
   { label: 'Methodology', href: '#methodology' },
   { label: 'Impact', href: '#impact' },
-  { label: 'About', href: '#team' },
+  { label: 'Team', href: '#team' },
   { label: 'Contact', href: '#contact' },
 ];
 
