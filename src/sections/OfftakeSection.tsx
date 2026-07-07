@@ -40,7 +40,7 @@ export const OfftakeSection: React.FC = () => {
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-2xl reveal">
-            <p className="section-label text-vc-green-sage mb-4">Offtake Opportunity</p>
+            <p className="section-label text-[#F8F6EE] mb-4"><strong>Offtake Opportunity</strong></p>
             <div className="font-mono text-vc-green-pale text-xs tracking-widest mb-3">AVAILABLE NOW</div>
             <div className="font-display text-8xl md:text-9xl font-bold text-vc-offwhite leading-none mb-2">575</div>
             <div className="font-display text-3xl font-bold text-vc-green-pale mb-5">Tons of Verified CDR</div>
@@ -73,21 +73,21 @@ export const OfftakeSection: React.FC = () => {
           {/* ERW vs Biochar split */}
           <div className="reveal mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="border border-white/10 rounded-2xl p-7 bg-white/3">
-              <p className="font-mono text-xs text-vc-green-sage tracking-widest mb-4">ERW CREDITS</p>
+              <p className="font-mono text-xs text-[#D0F0C0] tracking-widest mb-4">ERW CREDITS</p>
               <div className="font-display text-4xl font-bold text-vc-offwhite mb-2">575 tCO₂e</div>
               <p className="text-vc-parchment/60 text-sm">Enhanced Rock Weathering via Deccan Trap basalt — Isometric V1.1 verified. Delivery: 75t (2028) + 500t (2029).</p>
               <div className="mt-4 flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-vc-green-light animate-pulse" />
-                <span className="font-mono text-xs text-vc-green-light">Active Project Sagar Pilot</span>
+                <div className="w-2 h-2 rounded-full bg-[#D0F0C0] animate-pulse" />
+                <span className="font-mono text-xs text-[#D0F0C0]">Active Project Sagar Pilot</span>
               </div>
             </div>
             <div className="border border-white/10 rounded-2xl p-7 bg-white/3">
-              <p className="font-mono text-xs text-vc-green-sage tracking-widest mb-4">BIOCHAR CREDITS</p>
+              <p className="font-mono text-xs text-[#D0F0C0] tracking-widest mb-4">BIOCHAR CREDITS</p>
               <div className="font-display text-4xl font-bold text-vc-offwhite mb-2">5,000 tCO₂e</div>
-              <p className="text-vc-parchment/60 text-sm">Biochar CDR from invasive species — CSI C-sink protocol. First issuance 500 tCO₂e (2027). Scale 4,500 tCO₂e by 2029.</p>
+              <p className="text-vc-parchment/60 text-sm">Biochar CDR from invasive species - CSI C-sink protocol. First issuance 500 tCO₂e (2027). Scale 4,500 tCO₂e by 2029.</p>
               <div className="mt-4 flex items-center gap-2">
-                <div className="w-2 h-2 rounded-full bg-vc-green-light animate-pulse" />
-                <span className="font-mono text-xs text-vc-green-light">Morbi Pilot, Gujarat · Active</span>
+                <div className="w-2 h-2 rounded-full bg-[#D0F0C0] animate-pulse" />
+                <span className="font-mono text-xs text-[#D0F0C0]">Morbi Pilot, Gujarat · Active</span>
               </div>
             </div>
           </div>

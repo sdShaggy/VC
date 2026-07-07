@@ -175,3 +175,44 @@
   90% { opacity: 0.15; }
   100% { transform: translateY(-20vh) scale(1); opacity: 0; }
 }
+
+/* ─────────────────────────────────────────────────────────────────
+   LinkedIn Marquee — add this block to the bottom of index.css
+   ───────────────────────────────────────────────────────────────── */
+
+/* Keyframes */
+@keyframes marquee-left {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0%   { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+/* Track — uses width:max-content so it sizes to its children */
+.marquee-track {
+  display: flex;
+  width: max-content;
+  will-change: transform;
+}
+
+/* Direction helpers */
+.animate-marquee-left {
+  animation: marquee-left linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right linear infinite;
+}
+
+/* Pause entire lane on hover */
+.marquee-viewport:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Also pause when any iframe inside is focused / interacted */
+.marquee-viewport:focus-within .marquee-track {
+  animation-play-state: paused;
+}

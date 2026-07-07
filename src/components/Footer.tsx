@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, Linkedin, ArrowUpRight, Leaf } from 'lucide-react';
+import { Mail, Phone, Linkedin, ArrowUpRight } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   return (
@@ -36,25 +36,26 @@ export const Footer: React.FC = () => {
 
         {/* Footer Grid */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 border-t border-white/10 pt-14 mb-12">
+
           {/* Brand */}
           <div className="md:col-span-1">
-            <div className="flex items-center gap-3 mb-5">
-              <div className="w-9 h-9 bg-vc-green rounded-xl flex items-center justify-center">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2L4 7v10l8 5 8-5V7L12 2z" stroke="#F5F2EC" strokeWidth="1.5" strokeLinejoin="round"/>
-                  <circle cx="12" cy="12" r="2.5" fill="#C8DFC4"/>
-                </svg>
-              </div>
-              <div>
-                <div className="font-display font-bold text-vc-offwhite">VERIDIAN CARBON</div>
-                <div className="font-mono text-xs text-vc-green-sage tracking-widest">CDR • India</div>
-              </div>
+            <div className="mb-5">
+              <img
+                src="/foot_logo.png"
+                alt="Veridian Carbon"
+                className="h-14 w-auto object-contain"
+              />
             </div>
             <p className="text-vc-parchment/60 text-sm leading-relaxed">
               Building on-ground Carbon Removal in India through ERW and Biochar co-deployment.
             </p>
             <div className="mt-5 flex items-center gap-3">
-              <a href="https://www.linkedin.com/company/veridian-carbon" className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:border-vc-green-light hover:bg-vc-green/10 transition-all duration-300">
+              <a
+                href="https://www.linkedin.com/company/veridian-carbon"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 rounded-full border border-white/15 flex items-center justify-center hover:border-vc-green-light hover:bg-vc-green/10 transition-all duration-300"
+              >
                 <Linkedin size={14} />
               </a>
             </div>
@@ -64,27 +65,53 @@ export const Footer: React.FC = () => {
           <div>
             <h4 className="font-sans font-semibold text-sm text-vc-offwhite mb-5 tracking-wide">Protocol</h4>
             <ul className="flex flex-col gap-3">
-              {['Technology', 'Methodology', 'Operational Scale', 'dMRV System'].map(item => (
-                <li key={item}>
-                  <a href={`#${item.toLowerCase().replace(' ', '-')}`} className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors animated-underline">
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="#technology" className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors animated-underline">
+                  Technology
+                </a>
+              </li>
+              <li>
+                <a href="#methodology" className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors animated-underline">
+                  Methodology
+                </a>
+              </li>
+              <li>
+                <a href="#impact" className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors animated-underline">
+                  Operational Scale
+                </a>
+              </li>
+              <li>
+                <a href="#mrv" className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors animated-underline">
+                  dMRV System
+                </a>
+              </li>
             </ul>
           </div>
 
           {/* Company */}
-          <div>
+<div>
             <h4 className="font-sans font-semibold text-sm text-vc-offwhite mb-5 tracking-wide">Company</h4>
             <ul className="flex flex-col gap-3">
-              {['About Us', 'Team', 'Careers', 'Press', 'Investors'].map(item => (
-                <li key={item}>
-                  <a href="#" className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors animated-underline">
-                    {item}
-                  </a>
-                </li>
-              ))}
+              <li>
+                <a href="#conviction" className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors animated-underline">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="#team" className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors animated-underline">
+                  Team
+                </a>
+              </li>
+              <li>
+                <a href="#linkedin" className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors animated-underline">
+                  Latest
+                </a>
+              </li>
+              <li>
+                <a href="#" className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors animated-underline">
+                  Investors
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -98,15 +125,13 @@ export const Footer: React.FC = () => {
                   <a href="mailto:contact@veridiancarbon.com" className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors block">
                     contact@veridiancarbon.com
                   </a>
-                  <a href="mailto:ceo@veridiancarbon.com" className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors block">
-                    
-                  </a>
+
                 </div>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={14} className="text-vc-green-sage flex-shrink-0" />
                 <a href="tel:+919123252856" className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors">
-                  +91 XXXXXXXXXX
+                  +91 9123252856
                 </a>
               </li>
             </ul>
