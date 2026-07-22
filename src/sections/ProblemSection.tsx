@@ -28,7 +28,7 @@ export const ProblemSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         {/* Label + Heading */}
         <div className="reveal mb-16">
-          <p className="section-label mb-4">The Dual Imperative</p>
+          <p className="section-label mb-4">What is the Problem?</p>
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <h2 className="display-heading text-4xl md:text-5xl font-bold max-w-2xl">
               Net-Zero Goals &{' '}

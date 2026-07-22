@@ -211,7 +211,7 @@ export const StorytellingSection: React.FC = () => {
       {/* ── Top centre label ── */}
       <div className="absolute top-8 left-1/2 -translate-x-1/2 z-20 flex items-center gap-3 pointer-events-none select-none">
         <div className="h-px w-8 bg-white/20" />
-        <p className="font-mono text-xs text-white/40 tracking-[0.3em] uppercase">The Conviction</p>
+        <p className="font-mono text-xs text-white/40 tracking-[0.3em] uppercase">Our Conviction</p>
         <div className="h-px w-8 bg-white/20" />
       </div>
 

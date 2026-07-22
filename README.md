@@ -1,8 +1,11 @@
-# Veridian Carbon — Technical Documentation
+# Veridian Carbon - Technical Documentation
 
 > Production-grade for Veridian Carbon, a climate tech startup building Enhanced Rock Weathering (ERW) and Biochar co-deployment projects across Indian agriculture.
 >
-> **Live:** [vc-two-steel.vercel.app](https://vc-two-steel.vercel.app) · **Repo:** [github.com/sdShaggy/VC](https://github.com/sdShaggy/VC)
+> Optmized for different screen sizes...
+>
+> **Live:** [vc-two-steel.vercel.app](https://vc-two-steel.vercel.app)  
+> **Repo:** [github.com/sdShaggy/VC](https://github.com/sdShaggy/VC)
 
 ---
 
@@ -15,12 +18,11 @@
 5. [Component Architecture](#5-component-architecture)
 6. [Animation & Scroll System](#6-animation--scroll-system)
 7. [StorytellingSection — Deep Dive](#7-storytellingsection--deep-dive)
-8. [Navbar — Behaviour Contract](#8-navbar--behaviour-contract)
+8. [Navbar - Behaviour Contract](#8-navbar--behaviour-contract)
 9. [Footer](#9-footer)
 10. [Performance Notes](#10-performance-notes)
 11. [Deployment](#11-deployment)
 12. [Content Updates](#12-content-updates)
-13. [Known Constraints & TODOs](#13-known-constraints--todos)
 
 ---
 
@@ -47,11 +49,6 @@ No component library (MUI, Shadcn, etc.) is used. All UI is hand-built to match 
 ```
 VC/
 ├── public/
-│   ├── logo.png              # Navbar logo (hex icon + wordmark)
-│   ├── foot_logo.png         # Footer logo (green square variant)
-│   └── images/
-│       └── hero_video.mp4    # Background video for StorytellingSection
-│
 ├── src/
 │   ├── components/
 │   │   ├── Navbar.tsx            # Pinned → floating pill navbar
@@ -89,26 +86,11 @@ VC/
 - Node.js ≥ 18
 - npm ≥ 9
 
-### Install & run
 
-```bash
-git clone https://github.com/sdShaggy/VC.git
-cd VC
-npm install
-npm run dev
-# → http://localhost:3000
-```
-
-### Build for production
-
-```bash
-npm run build       # tsc + vite build → dist/
-npm run preview     # preview the dist/ bundle locally
-```
 
 ### Environment
 
-No `.env` variables are required. All content is static and co-located in components or the `public/` directory.
+No `.env` variables have been used. All content is static and co-located in components or the `public/` directory.
 
 ---
 
@@ -386,7 +368,7 @@ type Story = {
 
 ---
 
-## 8. Navbar — Behaviour Contract
+## 8. Navbar - Behaviour Contract
 
 ### 8.1 States
 
@@ -425,11 +407,12 @@ Place `foot_logo.png` in `public/`. Vite serves `public/` at root — no import 
 
 | Label | `href` | Target section `id` |
 |---|---|---|
+| About Us | `#problem` | `ProblemSection+Storytelling` |
 | Technology | `#technology` | `TechnologySection` |
 | Methodology | `#methodology` | `MethodologySection` |
-| Operational Scale | `#operational-scale` | `ImpactSection` (scale subsection) |
+| Impact | `#operational-scale` | `ImpactSection` (scale subsection) |
 | dMRV System | `#dmrv` | `DMRVSection` |
-| Protocol Impact | `#impact` | `ImpactSection` |
+
 
 Ensure target sections carry the exact matching `id` attribute or smooth-scroll anchors won't resolve.
 
@@ -470,27 +453,6 @@ The production build (`tsc && vite build`) outputs to `dist/`. With the current 
 
 The site is deployed on **Vercel** with zero configuration.
 
-### Automatic deploys
-
-Push to `main` → Vercel builds and deploys automatically.
-
-```
-Build command:  npm run build
-Output dir:     dist
-Node version:   18.x
-```
-
-### Manual deploy
-
-```bash
-npm i -g vercel
-vercel --prod
-```
-
-### Custom domain
-
-Set in Vercel dashboard → Project → Settings → Domains.
-
 ---
 
 ## 12. Content Updates
@@ -513,16 +475,16 @@ All user-facing content lives directly in component files. There is no CMS or co
 
 ---
 
-## 13. Known Constraints & TODOs
+## Authors
 
-### Known constraints
+**Sarvagya Dwivedi** 
 
-- **Video loop on Safari mobile:** RAF is aggressively throttled when the page is not in focus on iOS Safari. Native `loop` handles this as a fallback but there may be a 1-frame flash on very low-end devices.
-- **Horizontal scroll on touch:** `Methodology.tsx` uses JS-driven `translateX`. On touch devices, this fights with native scroll momentum. A `touch-action: pan-y` on the sticky container mitigates this but does not eliminate it.
-- **No SSR:** Pure client-side React. If SEO beyond the static `<meta>` tags in `index.html` is needed, migrate to Next.js App Router.
+*Engineering Intern, Veridian Carbon*
+
+May 2026 - Jul 2026
 
 ---
 
-## Authors
+Made for **Veridian Carbon**.
 
-**Sarvagya Dwivedi**
+
