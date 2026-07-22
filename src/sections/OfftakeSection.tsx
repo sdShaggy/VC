@@ -41,7 +41,7 @@ export const OfftakeSection: React.FC = () => {
         <div className="relative z-10 max-w-7xl mx-auto px-6 w-full">
           <div className="max-w-2xl reveal">
             <p className="section-label text-[#F8F6EE] mb-4"><strong>Offtake Opportunity</strong></p>
-            <div className="font-mono text-vc-green-pale text-xs tracking-widest mb-3">AVAILABLE NOW</div>
+            <div className="font-mono text-vc-cream text-xs tracking-widest mb-3">AVAILABLE NOW</div>
             <div className="font-display text-8xl md:text-9xl font-bold text-vc-offwhite leading-none mb-2">575</div>
             <div className="font-display text-3xl font-bold text-vc-green-pale mb-5">Tons of Verified CDR</div>
             <p className="text-vc-parchment/80 text-base mb-8 leading-relaxed max-w-lg">

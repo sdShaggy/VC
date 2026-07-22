@@ -1,34 +1,36 @@
 import React, { useEffect, useRef } from 'react';
-import { Linkedin, Mail } from 'lucide-react';
+import { Linkedin } from 'lucide-react';
 
 const team = [
   {
     name: 'Dhananjay Priyadarshi',
-    role: 'Co-Founder',
+    role: 'Co-Founder & CTO',
     focus: 'Technical implementation & systems architecture',
-    initials: 'DP',
-    color: '#2D6A2D',
+    linkedin: 'https://www.linkedin.com/in/dhananjay-priyadarshi-332673244/',
   },
   {
     name: 'Ayush Kumar',
     role: 'Co-Founder',
     focus: 'Strategy, financial modeling & climate data analytics',
-    initials: 'AK',
-    color: '#4A8C3F',
+    linkedin: 'https://www.linkedin.com/in/ayush-kumar-6ba47a277/',
+  },
+  {
+    name: 'Swapnil Tirkey',
+    role: 'Co-Founder',
+    focus: 'Operations & On-ground project execution',
+    linkedin: 'https://www.linkedin.com/in/swapnil-tirkey-8a1407335/',
   },
   {
     name: 'Dr. Tanushree Bhattacharya',
     role: 'Lead Geochemist',
     focus: '20+ years expertise in soil remediation & biochar science',
-    initials: 'TB',
-    color: '#7AAB74',
+    linkedin: 'https://www.linkedin.com/in/tanushree-bhattacharya-a1b149a3/',
   },
   {
     name: 'Colin Heffell',
     role: 'Senior Advisor',
     focus: 'European carbon markets & commercialization',
-    initials: 'CH',
-    color: '#8B6F47',
+    linkedin: 'https://www.linkedin.com/in/colinheffell/',
   },
 ];
 
@@ -70,19 +72,12 @@ export const TeamSection: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 items-stretch">
           {team.map((member) => (
             <div
               key={member.name}
-              className="reveal card-surface p-7 group hover:shadow-lg hover:shadow-vc-green/10 transition-all duration-300 hover:-translate-y-1"
+              className="reveal card-surface p-6 h-full min-h-[320px] flex flex-col justify-between group hover:shadow-lg hover:shadow-vc-green/10 transition-all duration-300 hover:-translate-y-1"
             >
-              {/* Avatar */}
-              <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 font-display font-bold text-xl text-white transition-transform duration-300 group-hover:scale-105"
-                style={{ backgroundColor: member.color }}
-              >
-                {member.initials}
-              </div>
-
               {/* Info */}
               <div className="mb-4">
                 <h3 className="font-display font-bold text-vc-dark text-lg leading-snug mb-1">
@@ -92,17 +87,19 @@ export const TeamSection: React.FC = () => {
                   {member.role}
                 </span>
               </div>
-              <p className="text-vc-text-muted text-sm leading-relaxed">
+              <p className="flex-1 text-vc-text-muted text-sm leading-relaxed mt-4">
                 {member.focus}
               </p>
 
               {/* Social */}
               <div className="mt-5 pt-4 border-t border-vc-green/10 flex gap-2">
-                <button className="w-8 h-8 rounded-lg bg-vc-green-mist flex items-center justify-center text-vc-green hover:bg-vc-green hover:text-white transition-all duration-200">
+                <a
+                  href={member.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-8 h-8 rounded-lg bg-vc-green-mist flex items-center justify-center text-vc-green hover:bg-vc-green hover:text-white transition-all duration-200"
+                >
                   <Linkedin size={13} />
-                </button>
-                <a href="mailto:contact@veridiancarbon.com" className="w-8 h-8 rounded-lg bg-vc-green-mist flex items-center justify-center text-vc-green hover:bg-vc-green hover:text-white transition-all duration-200">
-                  <Mail size={13} />
                 </a>
               </div>
             </div>

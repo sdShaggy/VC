@@ -4,7 +4,7 @@ import { Menu, X, Leaf } from 'lucide-react';
 const navLinks = [
   { label: 'Technology', href: '#technology' },
   { label: 'Methodology', href: '#methodology' },
-  { label: 'Operational Scale', href: '#impact' },
+  { label: 'Impact', href: '#impact' },
   { label: 'Team', href: '#team' },
   { label: 'Contact', href: '#contact' },
 ];

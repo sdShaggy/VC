@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { MapPin, TrendingUp, Users, Sprout } from 'lucide-react';
 
-const MP_IMAGE = '/sagar.avif' ;
+const MP_IMAGE = '/sagar.avif';
+const MORBI_IMAGE = '/1.webp';
 
 function AnimatedCounter({ end, suffix = '', prefix = '', duration = 2200 }: { end: number; suffix?: string; prefix?: string; duration?: number }) {
   const [count, setCount] = useState(0);
@@ -33,6 +34,15 @@ function AnimatedCounter({ end, suffix = '', prefix = '', duration = 2200 }: { e
 
   return <span ref={ref}>{prefix}{count.toLocaleString()}{suffix}</span>;
 }
+
+type ProjectSite = {
+  id: string;
+  tag: string;
+  image: string;
+  title: string;
+  subtitle: string;
+  details: { label: string; value: string }[];
+};
 
 export const ImpactSection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -72,9 +82,46 @@ export const ImpactSection: React.FC = () => {
     },
   ];
 
+  // Both pilots are active and deployed — Morbi listed first, Sagar second.
+  const projectSites: ProjectSite[] = [
+    {
+      id: 'morbi',
+      tag: 'PROJECT MORBI PILOT',
+      image: MORBI_IMAGE,
+      title: 'Morbi District, Gujarat',
+      subtitle: '45 hectares · Deccan Trap Basalt · Q3 2026',
+      details: [
+        { label: 'Location', value: 'Morbi District, Gujarat' },
+        { label: 'Deployment Date', value: 'Q3 2026 (Active)' },
+        { label: 'Area', value: '45 hectares' },
+        { label: 'Basalt Rate', value: '20 tons/hectare' },
+        { label: 'Sourcing Radius', value: '30-50 km from Saurashtra Deccan Trap quarries' },
+        { label: 'Feedstock Quality', value: '<100 microns, 15-20% Ca+Mg' },
+        { label: 'Verification', value: 'CSI C-sink Protocol' },
+      ],
+    },
+    {
+      id: 'sagar',
+      tag: 'PROJECT SAGAR PILOT',
+      image: MP_IMAGE,
+      title: 'Sagar District, Madhya Pradesh',
+      subtitle: '52.5 hectares · Deccan Trap Basalt · Q3 2026',
+      details: [
+        { label: 'Location', value: 'Sagar District, Madhya Pradesh' },
+        { label: 'Deployment Date', value: 'Q3 2026 (Active)' },
+        { label: 'Area', value: '52.5 hectares' },
+        { label: 'Basalt Rate', value: '20 tons/hectare' },
+        { label: 'Sourcing Radius', value: '30–50 km from Deccan Trap quarries' },
+        { label: 'Feedstock Quality', value: '<100 microns, 15–20% Ca+Mg' },
+        { label: 'Verification', value: 'Isometric V1.1 Protocol' },
+      ],
+    },
+  ];
+
   const roadmap = [
+    { period: 'Q3 2026', label: 'Morbi Pilot, Gujarat', deployment: '900 tons basalt', area: '~45 ha', output: null, status: 'active' },
     { period: 'Q3 2026', label: 'Sagar Pilot, MP', deployment: '1,050 tons basalt', area: '~52.5 ha', output: null, status: 'active' },
-    { period: 'End 2027', label: 'MP Regional Scale', deployment: '10,000 tons cumulative', area: '~500 ha', output: null, status: 'planned' },
+    { period: 'End 2027', label: 'MP + Gujarat Regional Scale', deployment: '10,000 tons cumulative', area: '~500 ha', output: null, status: 'planned' },
     { period: '2028', label: 'Multi-State + First Issuance', deployment: '+40,000 tons', area: '~2,000 ha', output: '75 tCO₂e', status: 'planned' },
     { period: '2029', label: 'Scale Target', deployment: '100,000 tons', area: '~5,000 ha', output: '500 tCO₂e', status: 'planned' },
   ];
@@ -93,7 +140,7 @@ export const ImpactSection: React.FC = () => {
               <span className="text-vc-green italic">Verified.</span>
             </h2>
             <p className="text-vc-text-muted text-base max-w-sm leading-relaxed">
-              Not a whitepaper. Active, sensor-instrumented fields generating verified carbon removal in Madhya Pradesh, India.
+              Not a whitepaper. Active, sensor-instrumented fields generating verified carbon removal across Gujarat and Madhya Pradesh, India.
             </p>
           </div>
         </div>
@@ -101,7 +148,7 @@ export const ImpactSection: React.FC = () => {
         {/* Stats bar */}
         <div className="reveal grid grid-cols-2 lg:grid-cols-4 gap-4 mb-14">
           {[
-            { num: 52, suf: '.5', label: 'Hectares, Q3 2026 Pilot', unit: 'ha' },
+            { num: 97, suf: '.5', label: 'Total Hectares, Active Pilots', unit: 'ha' },
             { num: 30, suf: '–50', label: 'Sourcing Radius (km)', unit: 'km' },
             { num: 500, suf: '', label: 'tCO₂e Target 2029', unit: 'tCO₂e' },
             { num: 5000, suf: '+', label: 'Year Carbon Permanence', unit: 'yrs' },
@@ -116,42 +163,38 @@ export const ImpactSection: React.FC = () => {
           ))}
         </div>
 
-        {/* Project Location */}
-        <div className="reveal grid grid-cols-1 lg:grid-cols-2 gap-8 mb-14">
-          <div>
-            <div className="card-surface overflow-hidden relative h-72 group">
-              <img src={MP_IMAGE} alt="Madhya Pradesh India" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-t from-vc-dark/60 via-transparent to-transparent" />
-              <div className="absolute bottom-5 left-5 right-5">
-                <div className="flex items-center gap-2 mb-2">
-                  <MapPin size={14} className="text-vc-green-pale" />
-                  <span className="font-mono text-xs text-vc-green-pale tracking-wider">PROJECT SAGAR PILOT</span>
+        {/* Project Locations — Morbi above Sagar */}
+        <div className="reveal flex flex-col gap-8 mb-14">
+          {projectSites.map(site => (
+            <div key={site.id} className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div>
+                <div className="card-surface overflow-hidden relative h-72 group">
+                  <img src={site.image} alt={site.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-vc-dark/60 via-transparent to-transparent" />
+                  <div className="absolute bottom-5 left-5 right-5">
+                    <div className="flex items-center gap-2 mb-2">
+                      <MapPin size={14} className="text-vc-green-pale" />
+                      <span className="font-mono text-xs text-vc-green-pale tracking-wider">{site.tag}</span>
+                    </div>
+                    <p className="font-display text-vc-offwhite font-bold text-xl">{site.title}</p>
+                    <p className="text-vc-parchment/70 text-sm mt-1">{site.subtitle}</p>
+                  </div>
                 </div>
-                <p className="font-display text-vc-offwhite font-bold text-xl">Sagar District, Madhya Pradesh</p>
-                <p className="text-vc-parchment/70 text-sm mt-1">52.5 hectares · Deccan Trap Basalt · Q3 2026</p>
+              </div>
+
+              <div className="flex flex-col gap-4">
+                <div className="card-surface p-6">
+                  <h3 className="font-display font-bold text-vc-dark text-xl mb-4">Project Details</h3>
+                  {site.details.map(({ label, value }) => (
+                    <div key={label} className="flex justify-between py-2.5 border-b border-vc-green/8 last:border-0">
+                      <span className="text-vc-text-muted text-sm">{label}</span>
+                      <span className="text-vc-dark text-sm font-medium text-right max-w-[55%]">{value}</span>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="flex flex-col gap-4">
-            <div className="card-surface p-6">
-              <h3 className="font-display font-bold text-vc-dark text-xl mb-4">Project Details</h3>
-              {[
-                { label: 'Location', value: 'Sagar District, Madhya Pradesh' },
-                { label: 'Deployment Date', value: 'Q3 2026 (Initial)' },
-                { label: 'Area', value: '52.5 hectares' },
-                { label: 'Basalt Rate', value: '20 tons/hectare' },
-                { label: 'Sourcing Radius', value: '30–50 km from Deccan Trap quarries' },
-                { label: 'Feedstock Quality', value: '<100 microns, 15–20% Ca+Mg' },
-                { label: 'Verification', value: 'Isometric V1.1 Protocol' },
-              ].map(({ label, value }) => (
-                <div key={label} className="flex justify-between py-2.5 border-b border-vc-green/8 last:border-0">
-                  <span className="text-vc-text-muted text-sm">{label}</span>
-                  <span className="text-vc-dark text-sm font-medium text-right max-w-[55%]">{value}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Co-benefits */}
@@ -186,8 +229,8 @@ export const ImpactSection: React.FC = () => {
           </h3>
           <div className="overflow-x-auto">
             <div className="min-w-[700px]">
-              {roadmap.map((row, i) => (
-                <div key={row.period} className={`flex items-center gap-4 p-5 rounded-2xl mb-3 transition-all duration-300 ${
+              {roadmap.map((row) => (
+                <div key={`${row.period}-${row.label}`} className={`flex items-center gap-4 p-5 rounded-2xl mb-3 transition-all duration-300 ${
                   row.status === 'active' ? 'bg-vc-green text-vc-offwhite' : 'bg-white border border-vc-green/10'
                 }`}>
                   <div className="w-24 flex-shrink-0">
