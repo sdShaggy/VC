@@ -14,7 +14,7 @@ const stories = [
     chapter: '01',
     heading: "India's Soil Crisis",
     quote: '"120 million farmers. Increasingly acidic soils. A crisis hiding in plain sight."',
-    body: 'Over 120 million smallholder farmers depend on soils that are increasingly acidic, depleted of nutrients, and vulnerable to erratic monsoons. Lantana camara has colonised over 13 million hectares of Indian forest - destroying biodiversity and rural livelihoods.',
+    body: 'Over 120 million smallholder farmers depend on soils that are increasingly acidic, depleted of nutrients, and vulnerable to erratic monsoons. Lantana camara has colonised over 13 million hectares of Indian forest — destroying biodiversity and rural livelihoods.',
     stat: '13M ha',
     statLabel: 'Lantana Colonised',
     attribution: null,
@@ -26,7 +26,7 @@ const stories = [
     chapter: '02',
     heading: 'Earth Has Been Doing This For Billions of Years',
     quote: '"We\'re not inventing something new. We\'re accelerating what nature already does."',
-    body: "Silicate rock weathering is the planet's own carbon thermostat - a geologic process that has regulated atmospheric CO₂ for eons. The science isn't speculative. It's written in rock.",
+    body: "Silicate rock weathering is the planet's own carbon thermostat — a geologic process that has regulated atmospheric CO₂ for eons. The science isn't speculative. It's written in rock.",
     stat: '5,000+',
     statLabel: 'Years of Permanence',
     attribution: null,
@@ -50,7 +50,7 @@ const stories = [
     chapter: '04',
     heading: "India as the World's CDR Powerhouse",
     quote: '"The richest basalt deposits. The most invasive biomass. The biggest opportunity."',
-    body: "India holds some of the world's richest basalt deposits and the worst invasive species crisis - both concentrated near its most degraded farmland. Our hyper-localised model scales to 150,000 tons of verified removal by 2030, across 10,000+ farmers.",
+    body: "India holds some of the world's richest basalt deposits and the worst invasive species crisis — both concentrated near its most degraded farmland. Our hyper-localised model scales to 150,000 tons of verified removal by 2030, across 10,000+ farmers.",
     stat: '1,50,000t',
     statLabel: 'Target by 2030',
     attribution: null,
@@ -215,16 +215,17 @@ export const StorytellingSection: React.FC = () => {
         <div className="h-px w-8 bg-white/20" />
       </div>
 
-      {/* ── Two-column content grid (single column on mobile/tablet) ── */}
+      {/* ── Two-column content grid ── */}
       <div
-        className="absolute inset-0 z-10 grid grid-cols-1 lg:grid-cols-2"
+        className="absolute inset-0 z-10 grid"
         style={{
+          gridTemplateColumns: '1fr 1fr',
           gridTemplateRows: '1fr',
           paddingTop: '80px',
-          paddingBottom: '112px',
-          paddingLeft: 'clamp(1.25rem, 6vw, 5rem)',
-          paddingRight: 'clamp(1.25rem, 6vw, 5rem)',
-          gap: 'clamp(1rem, 5vw, 5rem)',
+          paddingBottom: '100px',
+          paddingLeft: 'clamp(2rem, 6vw, 5rem)',
+          paddingRight: 'clamp(2rem, 6vw, 5rem)',
+          gap: 'clamp(2rem, 5vw, 5rem)',
           alignItems: 'start',
         }}
       >
@@ -253,7 +254,7 @@ export const StorytellingSection: React.FC = () => {
                   className="font-mono text-xs tracking-[0.3em] uppercase mb-5 select-none"
                   style={{ color: story.accentColor, opacity: 0.8 }}
                 >
-                  {story.chapter} / {String(stories.length).padStart(2, '0')} - {story.label}
+                  {story.chapter} / {String(stories.length).padStart(2, '0')} — {story.label}
                 </p>
 
                 <h2
@@ -340,9 +341,9 @@ export const StorytellingSection: React.FC = () => {
           })}
         </div>
 
-        {/* RIGHT: Large chapter number watermark — desktop only */}
+        {/* RIGHT: Large chapter number watermark */}
         <div
-          className="hidden lg:flex items-start justify-end select-none pointer-events-none"
+          className="flex items-start justify-end select-none pointer-events-none"
           style={{ paddingTop: 'clamp(0.5rem, 2vh, 2rem)' }}
         >
           <div className="relative">
