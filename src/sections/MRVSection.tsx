@@ -273,7 +273,7 @@ export const MRVSection: React.FC = () => {
               <span className="font-mono text-xs text-vc-green-light tracking-widest uppercase"><b>Automated LCA Engine</b></span>
             </div>
             <p className="text-[#1A110]/50 text-xs mb-6 leading-relaxed">
-              Strict net-negativity. Every tonne claimed is mathematically proven to exceed operational emissions. Python FastAPI — audit-ready reports in seconds.
+              Strict net-negativity. Every tonne claimed is mathematically proven to exceed operational emissions. Python FastAPI - audit-ready reports in seconds.
             </p>
             <div className="space-y-3">
               {lcaSteps.map((step, i) => (
@@ -338,7 +338,7 @@ export const MRVSection: React.FC = () => {
                 Closing the Greenwashing Loophole
               </p>
               <p className="text-[#1A110]/50 text-xs leading-relaxed">
-                Afforestation credits: 20 - 100 yr storage. SBTi now mandates only high-permanence CDR. Our credits meet every standard — now and in the future.
+                Afforestation credits: 20 - 100 yr storage. SBTi now mandates only high-permanence CDR. Our credits meet every standard - now and in the future.
               </p>
             </div>
 

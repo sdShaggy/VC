@@ -7,7 +7,7 @@ const steps = [
     icon: <Cloud size={28} />,
     title: 'Atmosphere CO₂ & Rainfall',
     subtitle: 'The Trigger',
-    description: 'Rainwater absorbs atmospheric CO₂, forming carbonic acid — nature\'s primary weathering agent. This is the starting point of the 5,000-year permanence chain.',
+    description: 'Rainwater absorbs atmospheric CO₂, forming carbonic acid - nature\'s primary weathering agent. This is the starting point of the 5,000-year permanence chain.',
     color: '#4A8C3F',
     bgColor: '#E8F2E5',
     image: '/atmco2.jpg?w=600&q=80&fit=crop',
@@ -17,10 +17,10 @@ const steps = [
     icon: <Mountain size={28} />,
     title: 'Silicate Rock + Biochar Applied',
     subtitle: 'The Catalyst',
-    description: 'Crushed Deccan Trap basalt (<100 microns) and pyrolyzed biochar are co-applied to agricultural soils at 20 tons/hectare — accelerating natural weathering by orders of magnitude.',
+    description: 'Crushed Deccan Trap basalt (<100 microns) and pyrolyzed biochar are co-applied to agricultural soils at 20 tons/hectare - accelerating natural weathering by orders of magnitude.',
     color: '#8B6F47',
     bgColor: '#F5EFE6',
-    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80&fit=crop',
+    image: 'https://images.unsplash.com/photo-1700135953364-598413a6cbf8?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
   },
   {
     number: '03',
@@ -37,7 +37,7 @@ const steps = [
     icon: <Waves size={28} />,
     title: 'Riverine Transport',
     subtitle: 'The Journey',
-    description: 'Dissolved bicarbonate is carried by groundwater and rivers toward the ocean — a natural, irreversible conveyor belt that cannot be reversed by fire, disease, or deforestation.',
+    description: 'Dissolved bicarbonate is carried by groundwater and rivers toward the ocean - a natural, irreversible conveyor belt that cannot be reversed by fire, disease, or deforestation.',
     color: '#1E6091',
     bgColor: '#E5F0F7',
     image: 'https://images.unsplash.com/photo-1506953823976-52e1fdc0149a?w=600&q=80&fit=crop',
@@ -47,7 +47,7 @@ const steps = [
     icon: <Globe size={28} />,
     title: '5,000+ Year Oceanic Storage',
     subtitle: 'The Lock-In',
-    description: 'Bicarbonate integrates into oceanic alkalinity — a thermodynamically stable sink. Carbon is locked away for millennia, meeting and exceeding IPCC\'s 1,000-year CDR durability standard.',
+    description: 'Bicarbonate integrates into oceanic alkalinity - a thermodynamically stable sink. Carbon is locked away for millennia, meeting and exceeding IPCC\'s 1,000-year CDR durability standard.',
     color: '#0A3B5C',
     bgColor: '#E0EEF7',
     image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=600&q=80&fit=crop',
@@ -223,7 +223,7 @@ export const MethodologySection: React.FC = () => {
                           className="mt-5 py-3 px-5 rounded-2xl text-center text-sm font-medium"
                           style={{ backgroundColor: step.color + '15', color: step.color }}
                         >
-                          ∞ Thermodynamically Stable — Permanent Storage
+                          ∞ Thermodynamically Stable - Permanent Storage
                         </div>
                       )}
                     </div>

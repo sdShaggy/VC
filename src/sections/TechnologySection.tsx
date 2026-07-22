@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 import { Zap, Layers, FlaskConical } from 'lucide-react';
 
 const BASALT_IMAGE = '/erw_1.png?w=900&q=80&fit=crop';
-const SOIL_IMAGE = 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=900&q=80&fit=crop';
+const SOIL_IMAGE = 'https://veridiancarbon.com/images/VERIDIAN%20PHOTOS/IMG_1482.JPG';
 
 export const TechnologySection: React.FC = () => {
   const sectionRef = useRef<HTMLElement>(null);
@@ -46,7 +46,7 @@ export const TechnologySection: React.FC = () => {
       title: 'Biochar Carbon Removal',
       subtitle: 'Converting invasive species to stable carbon',
       description:
-        'Invasive species (Prosopis juliflora, Lantana camara) are harvested and pyrolysed at 800°C in Kon-Tiki kilns — producing geologically stable, carbon-rich biochar with 1,000+ year permanence and 72% carbon purity.',
+        'Invasive species (Prosopis juliflora, Lantana camara) are harvested and pyrolysed at 800°C in Kon-Tiki kilns - producing geologically stable, carbon-rich biochar with 1,000+ year permanence and 72% carbon purity.',
       specs: [
         { label: 'H/Corg Ratio', value: '≤ 0.7' },
         { label: 'Organic Carbon', value: 'TOC ≥ 10%' },

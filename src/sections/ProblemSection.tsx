@@ -51,35 +51,100 @@ export const ProblemSection: React.FC = () => {
               Gigaton-Scale Removal Needed by 2050
             </h3>
             <p className="text-vc-text-muted text-sm mb-8 leading-relaxed">
-              Reaching Net-Zero requires massive emission reductions paired with gigaton-scale Carbon Dioxide Removal (CDR). Traditional afforestation credits don't meet the bar. They offer 20-100 years of storage at best.
+              Reaching Net-Zero requires massive emission reductions paired with gigaton-scale Carbon Dioxide Removal (CDR). Meeting global climate targets requires durable Carbon Dioxide Removal alongside deep emissions cuts. Scientific consensus indicates annual CDR demand must scale from less than 1 GtCO₂ today to over 10 GtCO₂ by 2050.
             </p>
 
             {/* Bar chart visual */}
-            <div className="flex items-end gap-4 h-36 mb-4">
-              {/* Current */}
-              <div className="flex flex-col items-center gap-2 flex-1">
-                <div className="w-full flex flex-col gap-0.5 items-center justify-end" style={{ height: '100%' }}>
-                  <div className="w-full bg-vc-text-muted/20 rounded-t-lg" style={{ height: '72%' }} />
-                  <div className="w-full bg-vc-terracotta/30 rounded-t-sm" style={{ height: '8%' }} />
+            {/* CDR Comparison */}
+            <div className="mt-10">
+              <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-6">
+
+                {/* Current */}
+                <div className="text-center">
+                  <div className="mx-auto w-24 h-24 rounded-2xl bg-vc-text-muted/10 flex flex-col items-center justify-center border border-vc-text-muted/10">
+                    <span className="font-display text-4xl font-bold text-vc-dark">
+                      &lt;1
+                    </span>
+                    <span className="text-xs tracking-widest text-vc-text-muted mt-1">
+                      GtCO₂/yr
+                    </span>
+                  </div>
+
+                  <p className="font-mono text-sm mt-4 text-vc-text-muted">
+                    Current State
+                  </p>
+
+                  <p className="text-xs text-vc-text-muted mt-2 leading-relaxed">
+                    Global durable Carbon Dioxide Removal deployed today.
+                  </p>
                 </div>
-                <span className="font-mono text-xs text-vc-text-muted text-center">Current State</span>
-              </div>
-              <div className="flex flex-col items-center justify-center pb-8 text-vc-terracotta">
-                <BarChart3 size={20} />
-                <span className="font-display font-bold text-xs mt-1">Gap</span>
-              </div>
-              {/* Net Zero Target */}
-              <div className="flex flex-col items-center gap-2 flex-1">
-                <div className="w-full flex flex-col gap-0.5 items-center justify-end" style={{ height: '100%' }}>
-                  <div className="w-full bg-vc-text-muted/20 rounded-t-lg" style={{ height: '28%' }} />
-                  <div className="w-full bg-vc-green rounded-t-sm" style={{ height: '52%' }} />
+
+                {/* Gap */}
+                <div className="flex flex-col items-center">
+                  <div className="w-24 border-t border-dashed border-vc-green/40" />
+
+                  <div className="my-4 flex flex-col items-center text-vc-terracotta">
+                    <BarChart3 size={24} />
+
+                    <span className="font-display font-bold mt-2">
+                      20×
+                    </span>
+
+                    <span className="text-xs uppercase tracking-wider">
+                      Increase Needed
+                    </span>
+                  </div>
+
+                  <div className="w-24 border-t border-dashed border-vc-green/40" />
                 </div>
-                <span className="font-mono text-xs text-vc-text-muted text-center">Net-Zero 2050</span>
+
+                {/* Target */}
+                <div className="text-center">
+                  <div className="mx-auto w-24 h-24 rounded-2xl bg-vc-green/10 border border-vc-green/20 flex flex-col items-center justify-center">
+                    <span className="font-display text-4xl font-bold text-vc-green">
+                      10+
+                    </span>
+
+                    <span className="text-xs  tracking-widest text-vc-green mt-1">
+                      GtCO₂/yr
+                    </span>
+                  </div>
+
+                  <p className="font-mono text-sm mt-4 text-vc-text-muted">
+                    Net-Zero 2050
+                  </p>
+
+                  <p className="text-xs text-vc-text-muted mt-2 leading-relaxed">
+                    Annual CDR required to meet global climate goals.
+                  </p>
+                </div>
+
+              </div>
+
+              {/* Bottom Insight */}
+              <div className="mt-8 rounded-2xl bg-vc-green-mist border border-vc-green/15 p-4 text-center">
+                <p className="font-semibold text-vc-dark">
+                  Durable CDR demand is expected to grow more than
+                  <span className="text-vc-green"> 20× </span>
+                  by 2050.
+                </p>
               </div>
             </div>
-            <div className="flex items-center gap-4 text-xs">
-              <span className="flex items-center gap-2"><span className="w-3 h-3 rounded bg-vc-text-muted/20 inline-block" /> Emission Reductions</span>
-              <span className="flex items-center gap-2"><span className="w-3 h-3 rounded bg-vc-green inline-block" /> CDR Required</span>
+
+            {/* Regulatory Drivers */}
+            <div className="mt-8 flex flex-wrap gap-2">
+              {[
+                'SBTi Mandated CDR',
+                'EU Green Claims Act',
+                'SEC Disclosure Rules',
+              ].map((tag) => (
+                <span
+                  key={tag}
+                  className="bg-vc-green-mist border border-vc-green/20 text-vc-green text-xs px-3 py-1.5 rounded-full font-medium"
+                >
+                  {tag}
+                </span>
+              ))}
             </div>
 
             {/* Insight pills */}
@@ -128,7 +193,7 @@ export const ProblemSection: React.FC = () => {
             <div className="card-surface p-6 border-l-4 border-vc-green">
               <p className="font-display font-bold text-vc-dark mb-2">The Market Gap</p>
               <p className="text-vc-text-muted text-sm leading-relaxed">
-                Corporate buyers demand high-durability CDR that simultaneously captures carbon, restores soil health, and delivers social benefits. No single solution has delivered all three — until now.
+                Corporate buyers demand high-durability CDR that simultaneously captures carbon, restores soil health, and delivers social benefits. No single solution has delivered all three - until now.
               </p>
               <div className="mt-4 flex items-center gap-2 text-vc-green font-medium text-sm">
                 <span className="w-2 h-2 rounded-full bg-vc-green animate-pulse" />

@@ -199,6 +199,35 @@ export const HeroSection: React.FC = () => {
           </div>
           <div className="w-full h-px bg-gradient-to-r from-transparent via-vc-green/25 to-transparent" />
         </div>
+
+        {/* ── Verification / backer marquee ── */}
+        <div
+          className={`mt-8 overflow-hidden transition-all duration-700 ${loaded ? 'opacity-100' : 'opacity-0'}`}
+          style={{ transitionDelay: '950ms' }}
+        >
+          <div
+            className="flex w-max gap-8 sm:gap-10"
+            style={{ animation: 'marquee-left 26s linear infinite' }}
+          >
+            {Array.from({ length: 2 }).map((_, dup) => (
+              <div key={dup} className="flex items-center gap-8 sm:gap-10 flex-shrink-0">
+                {[
+                  'Audited by Verra',
+                  'Backed by Y Combinator',
+                  'Powered by Drift',
+                  'Verified by CSI Global Artisan C-Sink',
+                ].map((badge) => (
+                  <span
+                    key={badge}
+                    className="font-sans text-[16px] sm:text-bold text-vc-dark/70 tracking-widest uppercase whitespace-nowrap"
+                  >
+                    {badge}
+                  </span>
+                ))}
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );

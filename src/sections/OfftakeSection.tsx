@@ -42,7 +42,7 @@ export const OfftakeSection: React.FC = () => {
           <div className="max-w-2xl reveal">
             <p className="section-label text-[#F8F6EE] mb-4"><strong>Offtake Opportunity</strong></p>
             <div className="font-mono text-vc-cream text-xs tracking-widest mb-3">AVAILABLE NOW</div>
-            <div className="font-display text-8xl md:text-9xl font-bold text-vc-offwhite leading-none mb-2">575</div>
+            <div className="font-display text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-bold text-vc-offwhite leading-none mb-2">575</div>
             <div className="font-display text-3xl font-bold text-vc-green-pale mb-5">Tons of Verified CDR</div>
             <p className="text-vc-parchment/80 text-base mb-8 leading-relaxed max-w-lg">
               Secure forward supply of high-permanence CDR credits through a non-binding Letter of Intent. No upfront capital. Pay only on successful delivery.
@@ -75,7 +75,7 @@ export const OfftakeSection: React.FC = () => {
             <div className="border border-white/10 rounded-2xl p-7 bg-white/3">
               <p className="font-mono text-xs text-[#D0F0C0] tracking-widest mb-4">ERW CREDITS</p>
               <div className="font-display text-4xl font-bold text-vc-offwhite mb-2">575 tCO₂e</div>
-              <p className="text-vc-parchment/60 text-sm">Enhanced Rock Weathering via Deccan Trap basalt — Isometric V1.1 verified. Delivery: 75t (2028) + 500t (2029).</p>
+              <p className="text-vc-parchment/60 text-sm">Enhanced Rock Weathering via Deccan Trap basalt - Isometric V1.1 verified. Delivery: 75t (2028) + 500t (2029).</p>
               <div className="mt-4 flex items-center gap-2">
                 <div className="w-2 h-2 rounded-full bg-[#D0F0C0] animate-pulse" />
                 <span className="font-mono text-xs text-[#D0F0C0]">Active Project Sagar Pilot</span>

@@ -147,7 +147,7 @@ export const LinkedInFeedSection: React.FC = () => (
             <span className="text-vc-green italic">LinkedIn</span>
           </h2>
           <p className="text-vc-text-muted text-base mt-3 max-w-md leading-relaxed">
-            Hover any post to read it — the feed keeps moving behind.
+            Hover any post to read it - the feed keeps moving behind.
           </p>
         </div>
         <a
