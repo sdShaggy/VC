@@ -73,7 +73,7 @@ export const HeroSection: React.FC = () => {
       <div className="absolute bottom-1/4 right-10 w-56 h-56 bg-vc-green-pale/20 rounded-full blur-3xl z-10 pointer-events-none" />
 
       {/* Content */}
-      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 pt-32 pb-20">
+      <div className="relative z-20 w-full max-w-7xl mx-auto px-6 pt-28 pb-20">
 
         {/* Status badge */}
         <div

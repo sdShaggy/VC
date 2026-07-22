@@ -112,7 +112,7 @@ export const MethodologySection: React.FC = () => {
   }, []);
 
   return (
-    <section id="methodology" className="relative">
+    <section id="methodology" className="relative scroll-mt-10">
       {/* Section label above sticky area */}
       <div className="bg-vc-offwhite py-20 px-6">
         <div className="max-w-7xl mx-auto">

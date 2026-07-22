@@ -93,7 +93,7 @@ export const Footer: React.FC = () => {
             <h4 className="font-sans font-semibold text-sm text-vc-offwhite mb-5 tracking-wide">Company</h4>
             <ul className="flex flex-col gap-3">
               <li>
-                <a href="#conviction" className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors animated-underline">
+                <a href="#problem" className="text-vc-parchment/60 text-sm hover:text-vc-green-pale transition-colors animated-underline">
                   About Us
                 </a>
               </li>
